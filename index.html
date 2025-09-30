@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seismic Blockchain - Encrypted Privacy Chain</title>
+    <style>
+        /* Color Palette: Light Pink/Watercolor (#FFB6C1 for top), Light Red (#FFB6C1) and Light Yellow (#FFFFE0 for middle accents), White/Black (#FFFFFF/#000000 for bottom) */
+        :root {
+            --light-pink: #FFB6C1;
+            --light-red: #FFB6C1;
+            --light-yellow: #FFFFE0;
+            --white: #FFFFFF;
+            --black: #000000;
+            --water-blue: #E0F6FF; /* Watercolor-inspired light blue tint */
+            --shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, var(--light-pink) 0%, var(--water-blue) 30%, var(--light-yellow) 70%, var(--white) 100%);
+            color: var(--black);
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            border-bottom: 3px solid var(--light-red);
+        }
+        h1 {
+            margin: 0;
+            color: var(--light-red);
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(255, 255, 224, 0.5);
+        }
+        .subtitle {
+            color: var(--black);
+            font-style: italic;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--light-yellow);
+        }
+        h2 {
+            color: var(--light-red);
+            border-bottom: 2px solid var(--light-pink);
+            padding-bottom: 10px;
+        }
+        .project-details {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            background: var(--light-yellow);
+            padding: 10px;
+        }
+        .project-topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .topic-item {
+            background: linear-gradient(45deg, var(--light-red), var(--light-yellow));
+            padding: 15px;
+            border-radius: 10px;
+            color: var(--black);
+            text-align: center;
+        }
+        .quiz {
+            counter-reset: quiz-counter;
+        }
+        .quiz-question {
+            counter-increment: quiz-counter;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .quiz-question::before {
+            content: counter(quiz-counter) "️⃣ ";
+            font-size: 1.2em;
+            color: var(--light-red);
+        }
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        .quiz-options li {
+            margin: 5px 0;
+            padding: 8px;
+            background: var(--light-yellow);
+            border-radius: 5px;
+            position: relative;
+        }
+        .quiz-options li::before {
+            content: attr(data-option);
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .correct {
+            background: var(--light-red) !important;
+            font-weight: bold;
+            color: var(--white);
+        }
+        .links-list {
+            list-style: none;
+            padding: 0;
+        }
+        .links-list li {
+            margin: 10px 0;
+        }
+        .links-list a {
+            color: var(--light-red);
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background: var(--light-yellow);
+            border-radius: 5px;
+            border-left: 4px solid var(--light-pink);
+        }
+        .links-list a:hover {
+            background: var(--light-pink);
+            color: var(--black);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: var(--black);
+            color: var(--white);
+            margin-top: 40px;
+        }
+        .credits {
+            font-size: 0.9em;
+            color: var(--light-yellow);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .project-topics { grid-template-columns: 1fr; }
+        }
+        /* Watercolor-inspired animations */
+        @keyframes fadeInSoft {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        section { animation: fadeInSoft 0.8s ease-out; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Seismic Blockchain</h1>
+        <p class="subtitle">The Encrypted Blockchain for Privacy-Focused dApps</p>
+    </header>
+    <main>
+        <section id="project-details">
+            <h2>Project Details</h2>
+            <div class="project-details">
+                <p>Seismic is a blockchain with encryption built into the base layer, not just wallets. It uses secure hardware to protect data end-to-end, splitting memory into Transparent and Encrypted regions. It keeps data private during all state transitions and supports DeFi, payments, and real-world asset apps. The code is fully open source, with a developer testnet already running. It aims to be the go-to chain for privacy-focused dApps, with strengths in privacy, hardware security, and an open ecosystem. Challenges include complexity, adoption, and scalability trade-offs.</p>
+            </div>
+        </section>
+        <section id="logo-image">
+            <h2>Project Logo & Images</h2>
+            <div class="logo-container">
+                <!-- Placeholder for professional logo; replace src with actual image URL -->
+                <img src="https://via.placeholder.com/200x100/FFB6C1/000000?text=Seismic+Logo" alt="Seismic Professional Logo - Encrypted Blockchain Symbol">
+                <p style="margin-top: 10px; font-style: italic;">(Description: A modern, abstract logo featuring encrypted lock icons in light pink and blue watercolor style, representing secure blockchain privacy.)</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+                <!-- Placeholders for prominent images; replace srcs with actual URLs from site -->
+                <img src="https://via.placeholder.com/300x200/FFFFE0/000000?text=Homepage+Banner" alt="Seismic Homepage Banner Image" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow);">
+                <img src="https://via.placeholder.com/300x200/E0F6FF/000000?text=Introducing+Seismic" alt="Introducing Seismic Blog Image" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow);">
+                <img src="https://via.placeholder.com/300x200/FFB6C1/000000?text=Documentation" alt="Seismic Documentation Image" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow);">
+                <img src="https://via.placeholder.com/300x200/FFFFE0/000000?text=Funding+Announcement" alt="Funding Announcement Image" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow);">
+            </div>
+        </section>
+        <section id="quiz">
+            <h2>5 Quiz Questions</h2>
+            <div class="quiz">
+                <div class="quiz-question">
+                    <h3>What sets Seismic apart from most blockchains?</h3>
+                    <ul class="quiz-options">
+                        <li data-option="A)"> Faster block time</li>
+                        <li data-option="B)" class="correct"> Built-in base-layer encryption ✅</li>
+                        <li data-option="C)"> Larger token supply</li>
+                        <li data-option="D)"> Cheaper gas</li>
+                    </ul>
+                </div>
+                <div class="quiz-question">
+                    <h3>Which memory regions does Seismic define?</h3>
+                    <ul class="quiz-options">
+                        <li data-option="A)"> Public & Private</li>
+                        <li data-option="B)" class="correct"> Transparent & Encrypted ✅</li>
+                        <li data-option="C)"> Hot & Cold</li>
+                        <li data-option="D)"> Read & Write</li>
+                    </ul>
+                </div>
+                <div class="quiz-question">
+                    <h3>Seismic’s code is:</h3>
+                    <ul class="quiz-options">
+                        <li data-option="A)"> Closed source</li>
+                        <li data-option="B)"> Licensed only to banks</li>
+                        <li data-option="C)" class="correct"> Completely open source ✅</li>
+                        <li data-option="D)"> Pay-to-use</li>
+                    </ul>
+                </div>
+                <div class="quiz-question">
+                    <h3>Which applications are a key focus for Seismic?</h3>
+                    <ul class="quiz-options">
+                        <li data-option="A)"> Social media only</li>
+                        <li data-option="B)" class="correct"> DeFi and encrypted dApps ✅</li>
+                        <li data-option="C)"> Gaming consoles</li>
+                        <li data-option="D)"> File storage only</li>
+                    </ul>
+                </div>
+                <div class="quiz-question">
+                    <h3>Current development status?</h3>
+                    <ul class="quiz-options">
+                        <li data-option="A)"> No network yet</li>
+                        <li data-option="B)"> Only on paper</li>
+                        <li data-option="C)" class="correct"> Developer testnet live ✅</li>
+                        <li data-option="D)"> Fully launched mainnet</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="project-links">
+            <h2>Project Links</h2>
+            <ul class="links-list">
+                <li><a href="https://www.seismic.systems/" target="_blank">Homepage - Logo & Banner</a></li>
+                <li><a href="https://www.seismic.systems/blog/introducing-seismic" target="_blank">Introducing Seismic Blog Post</a></li>
+                <li><a href="https://docs.seismic.systems/" target="_blank">Documentation - Seismic Book</a></li>
+                <li><a href="https://www.seismic.systems/blog/seismic-secures-7m-led-by-a16z-crypto-to-build-the-encrypted-blockchain" target="_blank">Funding Announcement</a></li>
+                <li><a href="https://github.com/seismic-systems" target="_blank">GitHub Repository (Open Source Code)</a></li>
+            </ul>
+        </section>
+        <section id="project-topics">
+            <h2>5 Best Topics for Projects</h2>
+            <div class="project-topics">
+                <div class="topic-item">1. Privacy-Enhanced DeFi Protocols: Build lending platforms with encrypted transactions.</div>
+                <div class="topic-item">2. Secure Payment Gateways: Develop cross-chain payment apps using Seismic's hardware security.</div>
+                <div class="topic-item">3. Real-World Asset Tokenization: Create tools for tokenizing assets with private state transitions.</div>
+                <div class="topic-item">4. Encrypted dApp Frameworks: Design SDKs for building privacy-focused decentralized apps.</div>
+                <div class="topic-item">5. Testnet Analytics Dashboard: A web app to monitor and visualize developer testnet activity.</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Seismic Blockchain. All rights reserved.</p>
+        <p class="credits">Created by Gmsniper | X: @Gmsniper6 | Discord: @jackcm_wsw3</p>
+    </footer>
+</body>
+</html>
